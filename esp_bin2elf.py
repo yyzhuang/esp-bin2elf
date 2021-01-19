@@ -19,10 +19,10 @@ def parse_rom(rom_name, rom_filename, flash_layout):
 def name_sections(rom):
     addr_to_section_name_mapping = {}
 
-    print "select a unique name for each section in the rom."
-    print "sensible defaults are available for the following common names:"
-    print " ".join(default_section_settings.keys())
-    print "if defaults are unavailable for a name, generic values will be used."
+    print("select a unique name for each section in the rom.")
+    print("sensible defaults are available for the following common names:")
+    print(" ".join(default_section_settings.keys()))
+    print("if defaults are unavailable for a name, generic values will be used.")
 
     for section in rom.sections:
         name = raw_input("enter a name for 0x%04x> " % (section.address))
@@ -40,7 +40,7 @@ def convert_rom_to_elf(esp_rom, addr_to_section_name_mapping, filename_to_write=
 
     for section in esp_rom.sections:
         if section.address not in addr_to_section_name_mapping:
-            print "generation failed: no name for 0x%04x." % (section.address)
+            print("generation failed: no name for 0x%04x." % (section.address))
             return None
 
         name = addr_to_section_name_mapping[section.address]
