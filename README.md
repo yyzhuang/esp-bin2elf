@@ -10,7 +10,11 @@ Once you have your ELF loaded, you can + should leverage the [rizzo IDA plugin](
 
 ### Requirements:
 
-Install the 'elffile' python module before using this.
+Install the 'coding' and 'elffile' python module before using this. For 'elffile', do 
+
+`git clone https://github.com/slorquet/elffile2.git`
+`cd elffile2/`
+`python setup.py install`
 
 ### Usage:
 
